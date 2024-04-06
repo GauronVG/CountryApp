@@ -9,7 +9,7 @@ const rutas:Routes= [
   { path:'by-capital',component:ByCapitalPageComponent},
   { path:'by-region',component:ByRegionPageComponent},
   { path:'by-country',component:ByCountryPageComponent},
-  { path:'by/id:',component:CountryPageComponent},
+  { path:'by/:id',component:CountryPageComponent},
   { path:'',component:CountryPageComponent}
 ]
 

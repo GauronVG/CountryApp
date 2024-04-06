@@ -1,1 +1,12 @@
-<p>by-capital-page works!</p>
+<h1>Por capital</h1>
+<hr>
+<app-search-box placeholder = "Buscar por capital" (onvalue)="searchbycapital($event)"></app-search-box>
+
+<div class="row">
+  <div class="col">
+  <hr>
+  <app-tabla [countries]="countries"></app-tabla>
+</div>
+</div>
+
+

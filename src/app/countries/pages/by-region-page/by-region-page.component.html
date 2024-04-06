@@ -1,1 +1,10 @@
-<p>by-region-page works!</p>
+<h1>Por region</h1>
+<hr>
+<app-search-box placeholder = "Buscar por Region" (onvalue)="searchbyRegion($event)"></app-search-box>
+
+<div class="row">
+  <div class="col">
+  <hr>
+  <app-tabla [countries]="countries"></app-tabla>
+</div>
+</div>

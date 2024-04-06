@@ -7,6 +7,7 @@ import { CommonModule } from '@angular/common';
 import { HomePageComponent } from './Pages/home-page/home-page.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { RouterModule } from '@angular/router';
+import { SearchBoxComponent } from './search-box/search-box.component';
 
 
 
@@ -15,7 +16,8 @@ import { RouterModule } from '@angular/router';
     HomePageComponent,
     AboutPageComponent,
     SidebarComponent,
-    ContactPageComponent
+    ContactPageComponent,
+
   ],
   imports: [
     CommonModule,
@@ -25,7 +27,8 @@ import { RouterModule } from '@angular/router';
     HomePageComponent,
     AboutPageComponent,
     SidebarComponent,
-    ContactPageComponent
+    ContactPageComponent,
+
   ]
 
 })

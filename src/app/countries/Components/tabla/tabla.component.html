@@ -1,0 +1,43 @@
+<!-- <div class="row">
+  <div class="col">
+    <ul>
+      <li *ngFor="let item of countries">
+        {{item.capital}}
+      </li>
+    </ul>
+  </div>
+</div> -->
+
+<div *ngIf="countries.length === 0;else table" class="alert alert-warning text-center">No hay paises para mostrar</div>
+<ng-template #table>
+
+  <table class="table table-striped table-dark">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Capital</th>
+        <th scope="col">Bandera</th>
+        <th scope="col">Poblacion</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of countries,let i = index">
+        <th scope="row">{{i+1}}</th>
+        <td>{{item.name.common}}</td>
+        <td>{{item.capital}}</td>
+        <td>
+          <img src="{{item.flags.svg}}" alt="{{item.name.common}}">
+          </td>
+        <td>{{item.population | number}}</td>
+        <td>
+          <a [routerLink]="[ '/countries/by', item.cca3]" >Info</a>
+        </td>
+
+      </tr>
+
+    </tbody>
+  </table>
+
+</ng-template>
